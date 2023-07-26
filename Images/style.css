@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .centered-content {
+    text-align: center;
+  }
+  
+  .resize-img {
+    border-radius: 50%;
+    width: 300px; /* set the desired width */
+    height: auto; /* set height to auto to maintain aspect ratio */
+  }
+  

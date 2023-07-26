@@ -1,0 +1,159 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(Images/14.PNG);
+  background-size: cover;
+}
+
+h3 {
+  text-align: center;
+  background-color: rgba(237, 228, 228, 0.697);
+}
+
+.game-title {
+  background-color: red;
+  color: white;
+  font-size: 50px; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 75%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: hard-light;
+}
+
+.center {
+  margin: auto;
+  width: 85%;
+  height: 800px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 175px;
+  height: 175px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card.clicked .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  filter: grayscale(0%);
+}
+
+.flip-card-front.match, .flip-card.clicked .flip-card-front.match {
+  filter: grayscale(100%);
+}
+
+.flip-card-back.match, .flip-card.clicked .flip-card-back.match {
+  filter: grayscale(100%);
+}
+
+.img-front-card {
+  width: 200px;
+  height: 200px;
+  box-shadow: 10px 20px 8px 5px rgba(0,0,0,0.2); 
+}
+
+.img-back-card {
+  margin-bottom: 10%;
+  width: 100px;
+  height: 100px;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  box-shadow: 10px 20px 8px 5px rgba(0,0,0,0.2);  
+}
+
+.job-position {
+  background-color: rgba(3, 2, 2, 0.362);
+}
+
+.state {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: red;
+  background-color: rgba(3, 2, 2, 0.881);
+}
+
+.male-name {
+  font-family: fantasy;
+}
+
+.woman-name {
+  font-family: fantasy;
+}
+
+.job-position {
+  font-style: italic;
+}
+
+.flip-card-back {
+  background-size: cover;
+  background-image: url(Images/1.JPG);
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: 10px 20px 8px 5px rgba(0,0,0,0.2); 
+}
+
+
+
+.grid-container-1 {
+  margin: auto;
+  display: grid;
+  height: 200px;
+  grid-template-columns: auto auto auto auto;
+  background-color: #121313;
+  padding: 10px;
+}
+
+.grid-container-2 {
+  margin: auto;
+  display: grid;
+  height: 200px;
+  grid-template-columns: auto auto auto auto;
+  background-color: #121313;
+  padding: 10px;
+}
+
+.grid-container-3 {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #121313;
+  padding: 10px;
+}
+
+.grid-item {
+  background-image: url(Images/16.JPEG);
+  background-size: cover;
+  background-color: rgba(215, 18, 18, 0.348);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
