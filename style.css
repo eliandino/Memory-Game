@@ -2,6 +2,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(Images/14.PNG);
   background-size: cover;
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+.bgMusic{
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional: Add a background color to the container for better visibility */
+  padding: 10px; /* Optional: Add some padding for better appearance */
 }
 
 h3 {
@@ -23,14 +37,32 @@ h3 {
   mix-blend-mode: hard-light;
 }
 
+.grid-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Add gap between grid containers */
+}
+
 .center {
   margin: auto;
   width: 85%;
-  height: 800px;
+  max-width: 1200px; /* Add a maximum width to avoid excessive stretching on large screens */
+  height: auto; /* Use auto height to adjust based on content */
   border: 3px solid #73AD21;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.356);
 }
+
+.grid-container-1,
+.grid-container-2,
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust the column size based on available space */
+  background-color: #121313;
+  padding: 10px;
+}
+
 
 .flip-card {
   background-color: transparent;
@@ -122,9 +154,28 @@ h3 {
   box-shadow: 10px 20px 8px 5px rgba(0,0,0,0.2); 
 }
 
+/* Adjust layout for medium-sized screens */
+@media screen and (max-width: 768px) {
+  .grid-container-1,
+  .grid-container-2,
+  .grid-container-3 {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust the column size for smaller screens */
+  }
+}
+
+/* Adjust layout for small-sized screens */
+@media screen and (max-width: 480px) {
+  .center {
+    width: 95%; /* Adjust the width to fit smaller screens */
+  }
+  .game-title {
+    font-size: 30px; /* Reduce font size for smaller screens */
+  }
+  /* Add more specific styles for small screens if needed */
+}
 
 
-.grid-container-1 {
+/* .grid-container-1 {
   margin: auto;
   display: grid;
   height: 200px;
@@ -148,12 +199,12 @@ h3 {
   grid-template-columns: auto auto auto auto;
   background-color: #121313;
   padding: 10px;
-}
+} */
 
-.grid-item {
+/* .grid-item {
   background-image: url(Images/16.JPEG);
   background-size: cover;
   background-color: rgba(215, 18, 18, 0.348);
   border: 1px solid rgba(0, 0, 0, 0.8);
   text-align: center;
-}
+} */
