@@ -16,6 +16,15 @@ function toggleFlip(e) {
   if (noClicking) return
   e.classList.toggle('clicked');
   
+
+  //play the audio 
+  var audio = document.getElementById("sound");
+  
+
+//reset audio to the beggining before playing
+audio.currentTime = 0;
+audio.play();
+
   // Add or remove the clicked card from the flippedCards array
   const index = flippedCards.indexOf(e);
   if (index > -1) {
@@ -33,7 +42,6 @@ function toggleFlip(e) {
 function checkMatch() {
   noClicking = true;
   const firstCard = flippedCards[0];
-
   const secondCard = flippedCards[1];
   
   const firstState = firstCard.querySelector('.state').textContent;
@@ -45,6 +53,31 @@ function checkMatch() {
     secondCard.classList.add('match');
     flippedCards = [];
     noClicking = false;
+
+const allCards = document.getElementsByClassName('flip-card');
+const matchedCards = document.getElementsByClassName('match');
+if(allCards.length === matchedCards.length) {
+  
+  setTimeout(function () {
+    //stop bgAudio
+    var bgAudio = document.getElementById('bgSound');
+    bgAudio.pause();
+    bgAudio.currentTime = 0;
+
+
+    //play winning audio
+    var winSound = document.getElementById("winSound");
+
+   winSound.play();
+
+    //show good job alert
+    alert("Good job, you catched all the suspects! Now there will finally be justice for all their victims!");
+    //reload the page to start new page
+    window.location.reload();
+  }, 1000);
+}
+
+
   } else {
     // Cards don't match, flip them back after a delay
     setTimeout(() => {
@@ -56,6 +89,8 @@ function checkMatch() {
   }
 }
 
+
+//For random images and states when page is reloaded ...
 function addRandomStates() {
   const flipCards = document.getElementsByClassName('flip-card-back');
 
@@ -106,6 +141,46 @@ function addRandomImages() {
     imagePaths.splice(randomIndex, 1); // Remove the used image path from the array
   }
 }
+
+// Wait for the document to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all elements with the class "flip-card"
+  var flipCards = document.getElementsByClassName("flip-card");
+
+  // Loop through all flip-card elements
+  for (var i = 0; i < flipCards.length; i++) {
+    // Add a click event listener to each flip-card element
+    flipCards[i].addEventListener("onclick", function() {
+      // Call the toggleFlip function and pass the clicked element (this) as an argument
+      toggleFlip(this);
+    });
+  }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the audio element for the background music
+  var bgAudio = document.getElementById('bgSound');
+  
+  var playButton = document.getElementById("playButton");
+  if(playButton) {
+    playButton.addEventListener("click", function () {
+      bgAudio.play();
+      playButton.style.display = "none";
+      });
+  }
+
+  if (bgAudio) {
+    document.addEventListener("click", function () {
+      bgAudio.play();
+      },{ once: true});
+  } 
+  
+});
+
+
+
 
 //call random states func
 addRandomStates();
