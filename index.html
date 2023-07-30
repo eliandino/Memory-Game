@@ -9,18 +9,19 @@
   </head>
   <body>
     <h1 class="game-title">WHO DID IT</h1>
-      
+<div class="overly-div" id="overlayDiv">
+  <button class="modern-button" onclick="hideDiv()">Start</button>
+</div>
+<div id="darkBackground"></div>
 <div class="center">
        
     <h3>Suspects are hidding in different cities, find them, you have to match the cities.</h3>
-    <div>
-      <audio class="bgMusic" controls src="sounds/ES_Young-Detective-More-than-Family.mp3" loop autoplay></audio>
-    </div>
+    
 <div class="grid-wrapper">
   <div class="grid-container-1">
    
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -31,13 +32,13 @@
                       <p class="job-position">Architect & Engineer</p>
                       <p class="male-name">Suspect</p>
                   </div>
-              </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -54,7 +55,7 @@
     </div>
 
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -71,7 +72,7 @@
     </div>
 
     <div class="grid-item">
-      <div class="flip-card" onclick="toggleFlip(this)">
+      <div class="flip-card" >
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -91,7 +92,7 @@
 
 <div class="grid-container-2">
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -108,7 +109,7 @@
     </div>
 
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -125,7 +126,7 @@
     </div>
 
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -142,7 +143,7 @@
       </div>
 
     <div class="grid-item">
-        <div class="flip-card" onclick="toggleFlip(this)">
+        <div class="flip-card" >
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -159,9 +160,9 @@
         </div>
     </div>
 
-    <div class="grid-container-3">
+  <div class="grid-container-3">
       <div class="grid-item">
-          <div class="flip-card" onclick="toggleFlip(this)">
+          <div class="flip-card" >
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -177,7 +178,7 @@
             </div>
       </div>
       <div class="grid-item">
-          <div class="flip-card" onclick="toggleFlip(this)">
+          <div class="flip-card" >
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -194,7 +195,7 @@
       </div>
 
       <div class="grid-item">
-          <div class="flip-card" onclick="toggleFlip(this)">
+          <div class="flip-card" >
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -211,7 +212,7 @@
         </div>
 
       <div class="grid-item">
-          <div class="flip-card" onclick="toggleFlip(this)">
+          <div class="flip-card" >
               <div class="flip-card-inner">
                 <div class="flip-card-front">
                   <img class="img-front-card" src="Images/13.PNG" alt="Avatar" />
@@ -223,15 +224,15 @@
                         <p class="name">Suspect</p>
                     </div>
                 </div>
-              </div>
-      </div>
+          </div>
+    </div>
 </div>
   
 </div>
 
 <audio id="sound" src="sounds/TunePocket-Book-Page-Turn-2-48K-24B.mp3"></audio>
+<audio id="bgSound" controls src="sounds/ES_Young-Detective-More-than-Family.mp3" loop autoplay></audio>
 <audio id="winSound" src="sounds/TunePocket-Get-It-Hip-Hop.mp3"></audio> 
-<audio id="bgSound" src="sounds/ES_Young-Detective-More-than-Family.mp3" autoplay loop muted></audio>       
 <script src="script.js"></script>
 </body>
 </html>
