@@ -6,7 +6,80 @@ body {
   padding: 0; /* Remove default body padding */
 }
 
-.bgMusic{
+#darkBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background color with some transparency */
+  display: none; /* Initially hidden */
+}
+
+#overlayDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the container height to the full viewport height */
+
+}
+
+.overly-div {
+  position: fixed; /* or "absolute" depending on your desired behavior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make the div cover the entire viewport width */
+  height: 100%; /* Make the div cover the entire viewport height */
+  background-color: rgba(20, 19, 19, 0.7); /* Add some background color and opacity for a semi-transparent effect */
+  color: white; /* Change text color if needed */
+  z-index: 9999; /* Use a high z-index value to place the div in front of other elements */
+  /* Add any other styling you want for the overlay-div */
+}
+
+/* Modern button styles */
+.modern-button {
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #aa2029; /* You can change the color to your preference */
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.modern-button:hover {
+  background-color: #0056b3; /* You can change the hover color to your preference */
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Active effect */
+.modern-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Focus effect */
+.modern-button:focus {
+  outline: none;
+}
+
+/* Disabled effect */
+.modern-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#bgSound{
   position: fixed;
   bottom: 10px;
   left: 50%;
@@ -174,37 +247,3 @@ h3 {
   /* Add more specific styles for small screens if needed */
 }
 
-
-/* .grid-container-1 {
-  margin: auto;
-  display: grid;
-  height: 200px;
-  grid-template-columns: auto auto auto auto;
-  background-color: #121313;
-  padding: 10px;
-}
-
-.grid-container-2 {
-  margin: auto;
-  display: grid;
-  height: 200px;
-  grid-template-columns: auto auto auto auto;
-  background-color: #121313;
-  padding: 10px;
-}
-
-.grid-container-3 {
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: #121313;
-  padding: 10px;
-} */
-
-/* .grid-item {
-  background-image: url(Images/16.JPEG);
-  background-size: cover;
-  background-color: rgba(215, 18, 18, 0.348);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  text-align: center;
-} */
